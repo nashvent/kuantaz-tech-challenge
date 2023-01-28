@@ -44,15 +44,24 @@ def update_delete_institutions(id):
       db.session.commit()
       return institution_schema.dump(institution)
 
-
       
-@app.route("/user")
+@app.route("/user", methods = ['GET','POST'])
 def list_users():
-    users = User.query.all()
-    user_schema = UserSchema(many=True)
-    return user_schema.dump(users)
-
-
+    if request.method == 'GET':
+      users = User.query.all()
+      user_schema = UserSchema(many=True)
+      return user_schema.dump(users)
+    if request.method == 'POST':
+      name = request.json.get('name', 'default name')
+      lastname = request.json.get('lastname', 'default lastname')
+      rut = request.json.get('rut')
+      born_date = request.json.get('born_date')
+      role = request.json.get('role')
+      user = User(name, lastname, rut, born_date, role)
+      db.session.add(user)
+      db.session.commit()
+      return UserSchema().dump(user)
+      
 if __name__ == '__main__':
     app.app_context().push()
     db.create_all()

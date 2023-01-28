@@ -21,6 +21,12 @@ class User(db.Model):
     born_date = db.Column(db.Date)
     role = db.Column(db.String(100))
     projects = db.relationship('Project', backref='user', lazy=True)
+    def __init__(self, name, lastname, rut, born_date, role):
+        self.name = name
+        self.lastname = lastname
+        self.rut = rut
+        self.born_date = born_date
+        self.role = role
     
 
 class Project(db.Model):
