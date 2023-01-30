@@ -1,0 +1,385 @@
+{
+  "collection": {
+    "info": {
+      "_postman_id": "544da746-599c-4738-ac84-948a6618ff44",
+      "name": "Kuantaz Anibal Ventura",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+      "updatedAt": "2023-01-30T17:37:19.000Z"
+    },
+    "item": [
+      {
+        "name": "Institution",
+        "item": [
+          {
+            "name": "list",
+            "id": "ab134ac0-40fd-4a9b-a1a3-9a25544f4aba",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "{{api_url}}/institution",
+                "host": [
+                  "{{api_url}}"
+                ],
+                "path": [
+                  "institution"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "show",
+            "id": "c4e9aec4-9535-464c-8b5b-a4145ed69c9e",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "{{api_url}}/institution/:id",
+                "host": [
+                  "{{api_url}}"
+                ],
+                "path": [
+                  "institution",
+                  ":id"
+                ],
+                "variable": [
+                  {
+                    "key": "id",
+                    "value": "1"
+                  }
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "update",
+            "id": "22804a3c-5802-45cc-a9c9-66c017da6dcd",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "PUT",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"name\": \"la nueva prueba\",\n    \"description\": \"la description 1231231\",\n    \"address\": \"rerer\"\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "{{api_url}}/institution/:id",
+                "host": [
+                  "{{api_url}}"
+                ],
+                "path": [
+                  "institution",
+                  ":id"
+                ],
+                "variable": [
+                  {
+                    "key": "id",
+                    "value": "2"
+                  }
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "create",
+            "id": "33497e58-02f3-43e7-999f-8aeb4ec776da",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"name\": \"prueba\",\n    \"description\": \"la description\",\n    \"address\": \"Av. 123 d\"\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "{{api_url}}/institution",
+                "host": [
+                  "{{api_url}}"
+                ],
+                "path": [
+                  "institution"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "delete",
+            "id": "d582ae7f-6910-4e4a-800b-c59daaaa2c2c",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "DELETE",
+              "header": [],
+              "url": {
+                "raw": "{{api_url}}/institution/:id",
+                "host": [
+                  "{{api_url}}"
+                ],
+                "path": [
+                  "institution",
+                  ":id"
+                ],
+                "variable": [
+                  {
+                    "id": "fd2ea1bc-99d0-4dfc-9123-079525f0aa68",
+                    "key": "id",
+                    "value": "2"
+                  }
+                ]
+              }
+            },
+            "response": []
+          }
+        ],
+        "id": "56eddd79-c37c-4dd1-9194-9948d74f5df3"
+      },
+      {
+        "name": "User",
+        "item": [
+          {
+            "name": "list",
+            "id": "3d9a75c4-bdd8-463b-aa49-48326747e319",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "{{api_url}}/user",
+                "host": [
+                  "{{api_url}}"
+                ],
+                "path": [
+                  "user"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "create",
+            "id": "2036e9f7-c19c-482f-b781-b8de4e02b66c",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"name\": \"Juliano\",\n    \"lastname\": \"Benito\",\n    \"rut\": \"1101012-3\",\n    \"born_date\": \"01-01-1998\",\n    \"role\": \"Administrador\"\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "{{api_url}}/user",
+                "host": [
+                  "{{api_url}}"
+                ],
+                "path": [
+                  "user"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "show",
+            "id": "17bfbc9e-c615-4780-9799-29347cdaa67f",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "{{api_url}}/user/:rut",
+                "host": [
+                  "{{api_url}}"
+                ],
+                "path": [
+                  "user",
+                  ":rut"
+                ],
+                "variable": [
+                  {
+                    "key": "rut",
+                    "value": "1101012-3"
+                  }
+                ]
+              }
+            },
+            "response": []
+          }
+        ],
+        "id": "c4f50b27-03ab-483f-baf0-88ca37c88304"
+      },
+      {
+        "name": "Project",
+        "item": [
+          {
+            "name": "list",
+            "id": "19c0d45e-391d-4b0d-8503-aa337fd13aff",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "{{api_url}}/project",
+                "host": [
+                  "{{api_url}}"
+                ],
+                "path": [
+                  "project"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "create",
+            "id": "6ad086a9-a0a9-4901-9258-797121c7ea2e",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"name\": \"Projecto\",\n    \"description\": \"Benito\",\n    \"start_date\": \"01-01-2020\",\n    \"end_date\": \"01-12-2022\",\n    \"institution_id\": 1,\n    \"user_id\": 3\n}",
+                "options": {
+                  "raw": {
+                    "language": "json"
+                  }
+                }
+              },
+              "url": {
+                "raw": "{{api_url}}/project",
+                "host": [
+                  "{{api_url}}"
+                ],
+                "path": [
+                  "project"
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "show",
+            "id": "4e535a11-1783-4220-88cf-aab3575d95ae",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "{{api_url}}/project/:id",
+                "host": [
+                  "{{api_url}}"
+                ],
+                "path": [
+                  "project",
+                  ":id"
+                ],
+                "variable": [
+                  {
+                    "key": "id",
+                    "value": "1"
+                  }
+                ]
+              }
+            },
+            "response": []
+          },
+          {
+            "name": "list with remaining days",
+            "id": "ac6a2823-5109-4c5b-bb2a-337412afe449",
+            "protocolProfileBehavior": {
+              "disableBodyPruning": true
+            },
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "{{api_url}}/project/summary",
+                "host": [
+                  "{{api_url}}"
+                ],
+                "path": [
+                  "project",
+                  "summary"
+                ]
+              }
+            },
+            "response": []
+          }
+        ],
+        "id": "4cb9c4f7-82bc-4486-b3db-04dc43aa60e0"
+      }
+    ],
+    "event": [
+      {
+        "listen": "prerequest",
+        "script": {
+          "id": "815df7f7-2673-4abb-a1e3-d994579b4d43",
+          "type": "text/javascript",
+          "exec": [
+            ""
+          ]
+        }
+      },
+      {
+        "listen": "test",
+        "script": {
+          "id": "5523fe8f-b8fd-409f-860a-faa3815b544f",
+          "type": "text/javascript",
+          "exec": [
+            ""
+          ]
+        }
+      }
+    ],
+    "variable": [
+      {
+        "id": "e7d4543c-9600-4865-b239-fc6a230aaaa4",
+        "key": "api_url",
+        "value": "http://localhost:5000",
+        "type": "string"
+      }
+    ]
+  }
+}

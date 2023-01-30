@@ -37,3 +37,11 @@ class Project(db.Model):
     end_date = db.Column(db.DateTime)
     institution_id = db.Column(db.Integer, db.ForeignKey('institution.id'), nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    # user = db.relationship('User', uselist=False, lazy='select')
+    def __init__(self, name, description, start_date, end_date, institution_id, user_id):
+        self.name = name
+        self.description = description
+        self.start_date = start_date
+        self.end_date = end_date
+        self.institution_id = institution_id
+        self.user_id = user_id
